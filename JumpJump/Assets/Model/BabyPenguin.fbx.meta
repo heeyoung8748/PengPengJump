@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: f9419fe4248e4a0478099d0aa3f999a8
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -6677414259284957757
+    second: Run02
+  - first:
+      74: -4129678586485572995
+    second: Int_Curious_01
+  - first:
+      74: 8086731055106896646
+    second: Idle_02
+  - first:
+      74: -1629334866819922512
+    second: grooming_1
+  - first:
+      74: 3410691564946850855
+    second: grooming_2
+  - first:
+      74: -289074550170475156
+    second: Idle_Stretching
+  - first:
+      74: 1167355656394099732
+    second: Idle_01
+  - first:
+      74: 8495413481883683165
+    second: Int_Roar
+  - first:
+      74: -5506369123348748840
+    second: Walk_01_withRock
+  - first:
+      74: -4474309024959806786
+    second: Walk_01
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperArm' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: BabyPenguin(Clone)
+      parentName: 
+      position: {x: 0.29999998, y: -0.7, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.4, y: 1.4, z: 1.4}
+    - name: BabyPenguin
+      parentName: BabyPenguin(Clone)
+      position: {x: 0.0002, y: 0.016899662, z: -2.22}
+      rotation: {x: -0.017535489, y: 0.9798595, z: -0.09988582, w: -0.17201956}
+      scale: {x: 571, y: 571, z: 571}
+    - name: Armature
+      parentName: BabyPenguin
+      position: {x: -5.010548e-11, y: 0.002948908, z: 2.0042192e-10}
+      rotation: {x: 0.000001808861, y: 0.00000031292436, z: -1.2444363e-20, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_Bone
+      parentName: Armature
+      position: {x: 0.001601184, y: -0.0029519037, z: -0.003907942}
+      rotation: {x: 0.0048174923, y: 0.0004962534, z: -0.0000024003396, w: 0.9999883}
+      scale: {x: 1.0000007, y: 0.99999976, z: 1.0000002}
+    - name: Spine_01
+      parentName: Root_Bone
+      position: {x: 0.00007544312, y: 0.0009519079, z: -0.00010525702}
+      rotation: {x: 0.70702815, y: -0.7070104, z: -0.01076796, w: -0.0114700375}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: Spine_02
+      parentName: Spine_01
+      position: {x: -0.0008145439, y: 0, z: -4.656613e-12}
+      rotation: {x: 0.0001335442, y: -0.07084184, z: 0.00012633204, w: 0.9974876}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.9999999}
+    - name: Neck_Bone
+      parentName: Spine_02
+      position: {x: -0.00092511694, y: 7.162271e-14, z: -4.0212295e-12}
+      rotation: {x: -0.00042979303, y: -0.037024554, z: -0.0003075143, w: 0.99931425}
+      scale: {x: 1.0398982, y: 0.9999998, z: 1.0000001}
+    - name: Head_Bone.001
+      parentName: Neck_Bone
+      position: {x: -0.00057970756, y: 1.9099387e-14, z: 2.2952041e-11}
+      rotation: {x: -0.00044975453, y: -0.45544797, z: -0.0005442609, w: 0.8902622}
+      scale: {x: 0.9870737, y: 1.0024308, z: 0.97496355}
+    - name: ItemPos
+      parentName: Head_Bone.001
+      position: {x: -0.0005828966, y: 0.0000032572987, z: -0.000059179598}
+      rotation: {x: 0.00095937855, y: -0.009298293, z: 0.00014398029, w: 0.9999563}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_L
+      parentName: Spine_02
+      position: {x: -0.0007761925, y: 0.00034113223, z: 0.000068788584}
+      rotation: {x: 0.6313445, y: 0.671747, z: -0.009484385, w: -0.3873889}
+      scale: {x: 0.99999964, y: 0.9999996, z: 0.99999994}
+    - name: Wing_L.001
+      parentName: Shoulder_L
+      position: {x: -0.00037614335, y: 4.6566147e-11, z: 1.8626456e-11}
+      rotation: {x: -0.008263162, y: -0.13701124, z: -0.21767548, w: 0.96632135}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1}
+    - name: Wing_L.002
+      parentName: Wing_L.001
+      position: {x: -0.00068678707, y: -3.7252913e-11, z: 8.381905e-11}
+      rotation: {x: -0.006883068, y: 0.03227441, z: 0.046977773, w: 0.99835074}
+      scale: {x: 1, y: 1.0000005, z: 1}
+    - name: Wing_L.003
+      parentName: Wing_L.002
+      position: {x: -0.00062019244, y: 1.3969842e-11, z: -1.6298149e-11}
+      rotation: {x: 0.8855732, y: 0.042532716, z: 0.031982534, w: 0.46144143}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Shoulder_R
+      parentName: Spine_02
+      position: {x: -0.0007763517, y: -0.00034256323, z: 0.00006898341}
+      rotation: {x: -0.2622593, y: 0.0064546117, z: 0.8046772, w: -0.53260976}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Wing_R.001
+      parentName: Shoulder_R
+      position: {x: -0.0003761433, y: -2.3283068e-11, z: 5.5879364e-11}
+      rotation: {x: 0.00826317, y: -0.13701124, z: 0.2176755, w: 0.96632135}
+      scale: {x: 1, y: 0.9999999, z: 1.0000002}
+    - name: Wing_R.002
+      parentName: Wing_R.001
+      position: {x: -0.00068678736, y: 5.8207675e-11, z: -5.00586e-11}
+      rotation: {x: 0.006882824, y: 0.032274503, z: -0.04697788, w: 0.99835074}
+      scale: {x: 1, y: 1.0000006, z: 1.0000004}
+    - name: Wing_R.003
+      parentName: Wing_R.002
+      position: {x: -0.00062019273, y: 1.3969841e-11, z: -5.820767e-12}
+      rotation: {x: 0.8855732, y: -0.04253262, z: 0.0319826, w: -0.46144158}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: Tail_Bone_01
+      parentName: Spine_01
+      position: {x: -0.00021538092, y: 1.4844724e-10, z: 0.00021128354}
+      rotation: {x: -0.13159211, y: -0.0026481897, z: 0.99129605, w: 0.0029459894}
+      scale: {x: 1.0000005, y: 1.0000004, z: 0.9999975}
+    - name: Tail_Bone_02
+      parentName: Tail_Bone_01
+      position: {x: -0.0006715901, y: -1.6298144e-12, z: -4.1978865e-11}
+      rotation: {x: 0.0009959912, y: 0.33929208, z: 0.003834309, w: 0.9406728}
+      scale: {x: 0.9999997, y: 0.9999997, z: 1}
+    - name: Upper_Leg_L
+      parentName: Spine_01
+      position: {x: -0.00039331295, y: 0.00047457067, z: -0.000110754096}
+      rotation: {x: 0.08724759, y: 0.87343735, z: 0.42245835, w: -0.22588497}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.000001}
+    - name: Leg_L
+      parentName: Upper_Leg_L
+      position: {x: -0.0002510915, y: 2.6722927e-10, z: 6.3466826e-10}
+      rotation: {x: 0.4260707, y: -0.19331351, z: -0.058766034, w: 0.8818391}
+      scale: {x: 1.0000006, y: 0.9999997, z: 1.0000002}
+    - name: Foot_L
+      parentName: Leg_L
+      position: {x: -0.00087435584, y: -7.4505825e-11, z: 3.7252847e-11}
+      rotation: {x: -0.00021827218, y: 0.6303093, z: -0.01156479, w: 0.7762579}
+      scale: {x: 0.99999976, y: 1.0000004, z: 1.0000002}
+    - name: Upper_Leg_R
+      parentName: Spine_01
+      position: {x: -0.00039331283, y: -0.00047640223, z: -0.000110753164}
+      rotation: {x: 0.08334237, y: -0.8771262, z: 0.423891, w: 0.20980957}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000008}
+    - name: Leg_R
+      parentName: Upper_Leg_R
+      position: {x: -0.00025109132, y: 3.6744022e-10, z: -9.3947655e-11}
+      rotation: {x: 0.41731453, y: 0.20460257, z: -0.03768671, w: -0.88462764}
+      scale: {x: 1.0000006, y: 0.99999976, z: 1.0000004}
+    - name: Foot_R
+      parentName: Leg_R
+      position: {x: -0.00087435555, y: -7.4505783e-11, z: -7.4505735e-11}
+      rotation: {x: -0.02110812, y: 0.64366555, z: 0.031054437, w: 0.7643852}
+      scale: {x: 1, y: 1.0000002, z: 1.0000005}
+    - name: Penguin_Chick_Mesh
+      parentName: BabyPenguin
+      position: {x: -0, y: 0.0016480259, z: 0}
+      rotation: {x: 0.0000018074641, y: 0.00000035762784, z: -4.0200965e-20, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
