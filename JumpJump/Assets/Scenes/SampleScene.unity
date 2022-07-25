@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 151861149}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5994318, y: 1}
+    m_SensorSize: {x: 0.5988858, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -335,8 +335,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173038069}
-  m_LocalRotation: {x: 0.018344052, y: 0.9523821, z: -0.29868126, w: 0.058492284}
-  m_LocalPosition: {x: -1.41, y: 4.498, z: 3}
+  m_LocalRotation: {x: 0.018491615, y: 0.9520611, z: -0.29964265, w: 0.058753803}
+  m_LocalPosition: {x: -1.41, y: 4.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -396,9 +396,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660240164}
   serializedVersion: 2
-  m_Mass: 0.22
-  m_Drag: 0
-  m_AngularDrag: 0.1
+  m_Mass: 0.2
+  m_Drag: 0.75
+  m_AngularDrag: 0.19
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -416,8 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03670654628a8434da86096cc0ec5520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  _jumpdegree: 0
+  MaxJumpDegree: 30
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,12 +563,12 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0.5
   m_VerticalDamping: 0.5
-  m_ScreenX: 0.123036556
-  m_ScreenY: 0.7869322
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0.017045455
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_ScreenX: 0.12303656
+  m_ScreenY: 0.78693223
+  m_DeadZoneWidth: 0.77
+  m_DeadZoneHeight: 0.82
+  m_SoftZoneWidth: 1.57
+  m_SoftZoneHeight: 1.51
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -587,9 +586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: -1.41, y: 4, z: 3}
-  m_XDamping: 0.1
-  m_YDamping: 0.1
-  m_ZDamping: 0.1
+  m_XDamping: 0.3
+  m_YDamping: 0.3
+  m_ZDamping: 0.3
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -675,8 +674,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.018344052, y: 0.9523821, z: -0.29868126, w: 0.058492284}
-  m_LocalPosition: {x: -1.41, y: 4.498, z: 3}
+  m_LocalRotation: {x: 0.018491615, y: 0.9520611, z: -0.29964265, w: 0.058753803}
+  m_LocalPosition: {x: -1.41, y: 4.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -746,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9419fe4248e4a0478099d0aa3f999a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.498
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f9419fe4248e4a0478099d0aa3f999a8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -807,6 +806,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f9419fe4248e4a0478099d0aa3f999a8, type: 3}
       propertyPath: m_Name
       value: BabyPenguin
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9419fe4248e4a0478099d0aa3f999a8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6997267347634490426, guid: f9419fe4248e4a0478099d0aa3f999a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,6 +934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: m_recipe_pepperoni_pizza_01
       objectReference: {fileID: 0}
+    - target: {fileID: 138769825130599304, guid: bb17201ae187cfd4facc32a31df3fc01, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 138769825130599305, guid: bb17201ae187cfd4facc32a31df3fc01, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1036,6 +1043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: m_dlc8_recipe_donuts_01_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7895372077286975792, guid: c6c727d9a909378448c7e3d2c0860515, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c727d9a909378448c7e3d2c0860515, type: 3}
 --- !u!1001 &7271018287045813983
@@ -1093,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: m_dlc8_recipe_hotdog_f_o_m_01_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7081528612439838467, guid: e6dab8ca4cf2a2242bda6f9811ceba76, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6dab8ca4cf2a2242bda6f9811ceba76, type: 3}
 --- !u!1001 &7949440782352749791
@@ -1105,6 +1120,10 @@ PrefabInstance:
     - target: {fileID: 2184350679520710085, guid: 73003672bea69454f92b5e44aaf8e3ba, type: 3}
       propertyPath: m_Name
       value: m_recipe_cake_01_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2184350679520710085, guid: 73003672bea69454f92b5e44aaf8e3ba, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3706729760964063168, guid: 73003672bea69454f92b5e44aaf8e3ba, type: 3}
       propertyPath: m_RootOrder
