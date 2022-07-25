@@ -5,21 +5,22 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody _rigidbody;
+    private PlayerInput _input;
+    public int MaxJumpDegree = 20;
+    public float RotateSpeed = 5f;
     private float _buttonPressedTime = 0.0f;
-    private float _buttonReleasedTime = 0.0f;
-    public int MaxJumpDegree = 30;
     private bool _isJumping = false;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-
-
+        _input = GetComponent<PlayerInput>();
     }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             StartCoroutine("buttonPressSec");
         }
@@ -27,13 +28,22 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine("Jump");
         }    
+        rotate();
     }
+
+    private void rotate()
+    {
+        float rotationAmount = _input.RotateDirection * RotateSpeed * Time.fixedDeltaTime;
+        Quaternion deltaRotation = Quaternion.Euler(0f, rotationAmount, 0f);
+        _rigidbody.MoveRotation(_rigidbody.rotation * deltaRotation);
+    }
+
     IEnumerator buttonPressSec()
     {
-        while(_isJumping==false && _buttonPressedTime < 20f)
+        while(_isJumping==false && _buttonPressedTime < MaxJumpDegree)
         {
             yield return new WaitForSeconds(0.03f);
-            _buttonPressedTime += 0.05f;
+            _buttonPressedTime += 0.04f;
         }
     }
     IEnumerator Jump()
@@ -43,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
         while(pos.y < 10 && _buttonPressedTime > 0)
         {
-            yield return new WaitForSeconds(0.002f);
+            yield return new WaitForSeconds(0.003f);
             pos.y += _buttonPressedTime * Time.deltaTime;
             _buttonPressedTime -= 0.1f;
             transform.position = pos;
