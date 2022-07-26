@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private PlayerInput _input;
-    public int MaxJumpDegree = 20;
     public float RotateSpeed = 20f;
+    private float _maxJumpDegree = 30f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
 
@@ -27,7 +27,8 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.Space) && _isJumping == false)
         {
             Jump();
-        }    
+        }
+        Time.timeScale = 2;
         rotate();
     }
 
@@ -40,10 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator buttonPressSec()
     {
-        while(_isJumping==false && _buttonPressedTime < MaxJumpDegree)
+        while(_isJumping==false && _buttonPressedTime < _maxJumpDegree)
         {
             yield return new WaitForSeconds(0.03f);
-            _buttonPressedTime += 0.1f;
+            _buttonPressedTime += 0.05f;
         }
     }
     void Jump()
@@ -55,16 +56,7 @@ public class PlayerMovement : MonoBehaviour
         _isJumping = true;
         Vector3 pos = transform.position;
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
-        _rigidbody.AddForce(0, 50f, _buttonPressedTime);
-        /*
-          while(pos.y < 10 && _buttonPressedTime > 0)
-         {
-             yield return new WaitForSeconds(0.003f);
-             pos.y += _buttonPressedTime * Time.deltaTime;
-             _buttonPressedTime -= 0.1f;
-             transform.position = pos;
-         }
-         */
+        _rigidbody.AddForce(0, 80f, _buttonPressedTime);
 
         _buttonPressedTime = 0.0f;
     }

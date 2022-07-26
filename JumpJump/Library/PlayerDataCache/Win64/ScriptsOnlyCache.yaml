@@ -74,19 +74,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1978}
+      Script: {instanceID: 2018}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 3084}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 3280}
     - Class: 114
-      Script: {instanceID: 4440}
+      Script: {instanceID: 4480}
     - Class: 114
-      Script: {instanceID: 6204}
+      Script: {instanceID: 6244}
     - Class: 114
-      Script: {instanceID: 7540}
+      Script: {instanceID: 7580}
     - Class: 114
-      Script: {instanceID: 9286}
+      Script: {instanceID: 9326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -166,7 +166,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: fb3905f736d148b911aaac5341b3a775
+      Hash: 588970b7e3aeede3e4552ce269f2b1f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
