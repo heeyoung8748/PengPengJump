@@ -48,7 +48,9 @@ public class PlayerMovement : MonoBehaviour
         _isJumping = true;
         Vector3 pos = transform.position;
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
-        _rigidbody.AddForce(0, 80f, _buttonPressedTime);
+        //_rigidbody.AddForce(0, 80f, _buttonPressedTime);
+        _rigidbody.AddForce(0, 90f, 0);
+        _rigidbody.AddForce(transform.forward * _buttonPressedTime);
 
         _buttonPressedTime = 0.0f;
     }
@@ -62,6 +64,13 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Die();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false)
+        {
+            transform.LookAt(other.transform.position);
         }
     }
 
