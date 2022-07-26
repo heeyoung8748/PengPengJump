@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private PlayerInput _input;
     public int MaxJumpDegree = 20;
-    public float RotateSpeed = 5f;
+    public float RotateSpeed = 20f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
 
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.Space) && _isJumping == false)
         {
-            StartCoroutine("Jump");
+            Jump();
         }    
         rotate();
     }
@@ -43,23 +43,30 @@ public class PlayerMovement : MonoBehaviour
         while(_isJumping==false && _buttonPressedTime < MaxJumpDegree)
         {
             yield return new WaitForSeconds(0.03f);
-            _buttonPressedTime += 0.04f;
+            _buttonPressedTime += 0.1f;
         }
     }
-    IEnumerator Jump()
+    void Jump()
     {
+        if(_isJumping)
+        {
+            return;
+        }
         _isJumping = true;
         Vector3 pos = transform.position;
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
-        while(pos.y < 10 && _buttonPressedTime > 0)
-        {
-            yield return new WaitForSeconds(0.003f);
-            pos.y += _buttonPressedTime * Time.deltaTime;
-            _buttonPressedTime -= 0.1f;
-            transform.position = pos;
-        }
+        _rigidbody.AddForce(0, 50f, _buttonPressedTime);
+        /*
+          while(pos.y < 10 && _buttonPressedTime > 0)
+         {
+             yield return new WaitForSeconds(0.003f);
+             pos.y += _buttonPressedTime * Time.deltaTime;
+             _buttonPressedTime -= 0.1f;
+             transform.position = pos;
+         }
+         */
+
         _buttonPressedTime = 0.0f;
-        _isJumping = false;
     }
 
     private void OnCollisionEnter(Collision collision)
