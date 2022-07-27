@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlatformSpawner : MonoBehaviour
 {
     public Platform PlatformPrefab;
-    public int MaxPlatformCount = 10;
+    public int MaxPlatformCount = 30;
 
     private Platform[] _platforms;
     private int _nextSpawnPlatformIndex = 0; 

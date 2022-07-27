@@ -58,13 +58,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.transform.tag == "DeadZone")
+        {
+            Die();
+        }
         if (collision.transform.tag == "Ground")
         {
             _isJumping = false;
-        }
-        else if(collision.transform.tag == "DeadZone")
-        {
-            Die();
         }
     }
     private void OnTriggerEnter(Collider other)
