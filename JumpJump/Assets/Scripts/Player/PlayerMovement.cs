@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         while(_isJumping==false && _buttonPressedTime < _maxJumpDegree)
         {
             yield return new WaitForSeconds(0.01f);
-            _buttonPressedTime += 0.02f;
+            _buttonPressedTime += 0.05f;
         }
     }
     void Jump()
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Die();
         }
-        if (collision.transform.tag == "Ground")
+        else
         {
             _isJumping = false;
         }
@@ -71,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false)
         {
-            Debug.Log($"보고 있는 것: {other}");
             transform.LookAt(other.transform.position);
         }
     }
