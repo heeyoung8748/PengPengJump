@@ -198,9 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: 0.02, y: 5.54, z: -3.5}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0.1
+  m_YDamping: 0.1
+  m_ZDamping: 0.1
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 151861153}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,6 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSpeed: 20
+  JumpSpeed: 2
 --- !u!65 &660240173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -625,8 +626,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.35, y: 5.51, z: 9.03}
-  m_Center: {x: 0, y: 1.83, z: 3.52}
+  m_Size: {x: 25.56, y: 11.86, z: 24.3}
+  m_Center: {x: 0, y: 1.83, z: 1.63}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +790,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.39095524, y: 0.013144444, z: -0.0055839345, w: 0.92029893}
+  m_LocalRotation: {x: 0.39095527, y: 0.013144419, z: -0.0055839242, w: 0.92029893}
   m_LocalPosition: {x: 0.02, y: 6.22, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1075,7 +1076,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189253064}
-  m_LocalRotation: {x: 0.39095524, y: 0.013144444, z: -0.0055839345, w: 0.92029893}
+  m_LocalRotation: {x: 0.39095527, y: 0.013144419, z: -0.0055839242, w: 0.92029893}
   m_LocalPosition: {x: 0.02, y: 6.22, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1098,7 +1099,7 @@ GameObject:
   - component: {fileID: 2130797813}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

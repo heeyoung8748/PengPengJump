@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _isJumping = false;
         }
-        else
+        else if(collision.transform.tag == "DeadZone")
         {
             Die();
         }
@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false)
         {
+            Debug.Log($"보고 있는 것: {other}");
             transform.LookAt(other.transform.position);
         }
     }

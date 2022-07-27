@@ -9,7 +9,7 @@ public class PlatformSpawner : MonoBehaviour
     private Platform[] _platforms;
     private int _nextSpawnPlatformIndex = 0; 
 
-    private readonly Vector3 _poolPosition = new Vector3(0, -20, 0);
+    private readonly Vector3 _poolPosition = new Vector3(20, 20, 20);
     private Vector3 _currentPoolPosition;
 
 
