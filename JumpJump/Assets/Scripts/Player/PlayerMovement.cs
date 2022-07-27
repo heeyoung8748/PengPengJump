@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private PlayerInput _input;
     public float RotateSpeed = 20f;
+    public int JumpSpeed = 2;
     private float _maxJumpDegree = 30f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
@@ -35,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
     {
         while(_isJumping==false && _buttonPressedTime < _maxJumpDegree)
         {
-            yield return new WaitForSeconds(0.03f);
-            _buttonPressedTime += 0.05f;
+            yield return new WaitForSeconds(0.01f);
+            _buttonPressedTime += 0.02f;
         }
     }
     void Jump()
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
         //_rigidbody.AddForce(0, 80f, _buttonPressedTime);
         _rigidbody.AddForce(0, 90f, 0);
-        _rigidbody.AddForce(transform.forward * _buttonPressedTime);
+        _rigidbody.AddForce(transform.forward * _buttonPressedTime * JumpSpeed);
 
         _buttonPressedTime = 0.0f;
     }

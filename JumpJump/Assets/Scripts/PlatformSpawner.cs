@@ -28,10 +28,12 @@ public class PlatformSpawner : MonoBehaviour
     {
         int randomXpos = Random.Range(-5, 4);
         int randomZpos = Random.Range(4, 7);
+        float randomScale = Random.Range(3, 6) * 0.01f;
         Vector3 spawnPosition = new Vector3(_currentPoolPosition.x + randomXpos,_currentPoolPosition.y, _currentPoolPosition.z + randomZpos);
         _currentPoolPosition = spawnPosition;
         Platform currentPlatform = _platforms[_nextSpawnPlatformIndex];
         currentPlatform.transform.position = spawnPosition;
+        currentPlatform.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
         currentPlatform.gameObject.SetActive(true);
         currentPlatform.OnEnable();
         currentPlatform.GetComponent<Platform>().IsClamped.AddListener(SpawnPlatform);
