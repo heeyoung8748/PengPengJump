@@ -18,7 +18,7 @@ public class Platform : MonoBehaviour
         if (collision.gameObject.tag == "Player" && collision.gameObject.activeInHierarchy == true && IsOnClamped == false)
         {
             IsOnClamped = true;
-            Debug.Log("소환간다");
+            GameManager.Instance.AddCurrentScore();
             IsClamped.Invoke();
         }
     }

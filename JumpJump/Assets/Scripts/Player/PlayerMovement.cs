@@ -6,9 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private PlayerInput _input;
-    public float RotateSpeed = 20f;
     public int JumpSpeed = 2;
-    private float _maxJumpDegree = 30f;
+    private float _maxJumpDegree = 50f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
 
@@ -69,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false)
+        if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false && _isJumping == false)
         {
             transform.LookAt(other.transform.position);
         }
