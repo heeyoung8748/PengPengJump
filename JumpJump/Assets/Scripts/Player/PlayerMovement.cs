@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-        Time.timeScale = 2;
     }
 
     IEnumerator buttonPressSec()

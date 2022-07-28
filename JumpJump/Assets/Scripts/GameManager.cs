@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class GameManager : SingletonBehavior<GameManager>
 {
     private int _currentScore = 0;
+    private bool _pause = false;
 
     public UnityEvent<int> OnScoreChanged = new UnityEvent<int>();
+    public UnityEvent GamePause = new UnityEvent();
     public int CurrentScore
     {
         get
@@ -20,6 +22,11 @@ public class GameManager : SingletonBehavior<GameManager>
             OnScoreChanged.Invoke(_currentScore);
         }
     }
+    private void Start()
+    {
+        Time.timeScale = 2;
+        GamePause.AddListener(IsPaused);
+    }
 
     void Update()
     {
@@ -28,8 +35,19 @@ public class GameManager : SingletonBehavior<GameManager>
             SceneManager.LoadScene(0);
             _currentScore = 0;
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            _pause = !_pause;
+            GamePause?.Invoke();
+        }
     }
 
+    private void IsPaused()
+    {
+        if(_pause) Time.timeScale = 0;
+        else Time.timeScale = 2;
+        return;
+    }
     public void AddCurrentScore()
     {
         CurrentScore += 1;

@@ -32,8 +32,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.dll:
-    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -119,47 +117,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 3074}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3164}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 3270}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3368}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3680}
+      Script: {instanceID: 3678}
     - Class: 114
-      Script: {instanceID: 4486}
+      Script: {instanceID: 4484}
     - Class: 114
-      Script: {instanceID: 5220}
+      Script: {instanceID: 5218}
     - Class: 114
-      Script: {instanceID: 5366}
+      Script: {instanceID: 5364}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 5736}
     - Class: 114
-      Script: {instanceID: 6270}
+      Script: {instanceID: 6268}
     - Class: 114
-      Script: {instanceID: 6582}
+      Script: {instanceID: 6580}
     - Class: 114
-      Script: {instanceID: 6786}
+      Script: {instanceID: 6784}
     - Class: 114
-      Script: {instanceID: 7086}
+      Script: {instanceID: 7084}
     - Class: 114
-      Script: {instanceID: 7622}
+      Script: {instanceID: 7620}
     - Class: 114
-      Script: {instanceID: 7676}
+      Script: {instanceID: 7674}
     - Class: 114
-      Script: {instanceID: 7912}
+      Script: {instanceID: 7910}
     - Class: 114
-      Script: {instanceID: 8406}
+      Script: {instanceID: 8404}
     - Class: 114
-      Script: {instanceID: 8800}
+      Script: {instanceID: 8798}
     - Class: 114
-      Script: {instanceID: 9380}
+      Script: {instanceID: 9378}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -443,7 +441,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: d3c7e6460025aad43e9b53651f97d8d9
+      Hash: c3d41173f396399e0d3110dcddb30721
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
