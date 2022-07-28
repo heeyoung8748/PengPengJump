@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "DeadZone")
+        if(collision.transform.tag == "DeadZone" && transform.position.y <= 0)
         {
             Die();
         }

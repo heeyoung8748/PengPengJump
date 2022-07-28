@@ -28,11 +28,11 @@ public class PlatformSpawner : MonoBehaviour
     {
         int randomXpos = Random.Range(-2, 4);
         int randomZpos = Random.Range(4, 7);
-        float randomScale = Random.Range(3, 6) * 0.01f;
-        Vector3 spawnPosition = new Vector3(_currentPoolPosition.x + randomXpos,_currentPoolPosition.y, _currentPoolPosition.z + randomZpos);
+        float randomScale = Random.Range(0.3f, 1f);
+        Vector3 spawnPosition = new Vector3(_currentPoolPosition.x + randomXpos, 0f, _currentPoolPosition.z + randomZpos);
         Platform currentPlatform = _platforms[_nextSpawnPlatformIndex];
         currentPlatform.transform.position = spawnPosition;
-        currentPlatform.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+        currentPlatform.transform.localScale = new Vector3(randomScale, randomScale * 1.4f, randomScale);
 
         // 오브젝트 둥실 떠오르는 효과는 이쯤에 넣기
 
