@@ -13,6 +13,14 @@ public class Platform : MonoBehaviour
         IsOnClamped = false;
     }
 
+    public void Update()
+    {
+        if (gameObject.activeSelf == true && transform.position.y < 0f &&IsOnClamped == false)
+        {
+            StartCoroutine("FloatingPlatform");
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player" && collision.gameObject.activeInHierarchy == true && IsOnClamped == false)
@@ -21,5 +29,17 @@ public class Platform : MonoBehaviour
             GameManager.Instance.AddCurrentScore();
             IsClamped.Invoke();
         }
+    }
+
+    IEnumerator FloatingPlatform()
+    {
+        Vector3 startPos = transform.position;
+        while(startPos.y < 0f)
+        {
+            yield return new WaitForSeconds(0.01f);
+            startPos.y += 0.1f;
+            transform.position = startPos;
+        }
+        
     }
 }

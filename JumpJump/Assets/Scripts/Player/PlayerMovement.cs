@@ -36,10 +36,10 @@ public class PlayerMovement : MonoBehaviour
     {
         while(_isJumping==false)
         {
-            yield return new WaitForSeconds(0.05f);
-            _buttonPressedTime += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+            _buttonPressedTime += 0.5f;
             Vector3 groundPos = _ground.transform.position;
-            groundPos.y -= 0.001f;
+            groundPos.y -= 0.005f;
             _ground.transform.position = groundPos;
 
         }
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "DeadZone" && transform.position.y <= 0)
+        if(collision.transform.tag == "DeadZone" || transform.position.y < -0.5)
         {
             Die();
         }
@@ -76,7 +76,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.tag == "Ground" && other.GetComponent<Platform>().IsOnClamped == false && _isJumping == false)
         {
-            transform.LookAt(other.transform.position);
+            Vector3 lookPos = other.transform.position;
+            lookPos.y = 0;
+            transform.LookAt(lookPos);
         }
     }
 
