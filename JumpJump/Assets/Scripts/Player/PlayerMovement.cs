@@ -37,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
         while(_isJumping==false)
         {
             yield return new WaitForSeconds(0.05f);
-            _buttonPressedTime += 0.05f;
+            _buttonPressedTime += 0.1f;
             Vector3 groundPos = _ground.transform.position;
-            groundPos.y -= 0.0001f;
+            groundPos.y -= 0.001f;
             _ground.transform.position = groundPos;
 
         }
