@@ -7,9 +7,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private PlayerInput _input;
     public int JumpSpeed = 2;
-    private float _maxJumpDegree = 50f;
+    //private float _maxJumpDegree = 50f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
+    private GameObject _ground;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator buttonPressSec()
     {
-        while(_isJumping==false && _buttonPressedTime < _maxJumpDegree)
+        while(_isJumping==false)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.05f);
             _buttonPressedTime += 0.05f;
+            Vector3 groundPos = _ground.transform.position;
+            groundPos.y -= 0.0001f;
+            _ground.transform.position = groundPos;
+
         }
     }
     void Jump()
@@ -64,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _isJumping = false;
+            _ground = collision.gameObject;
         }
     }
     private void OnTriggerEnter(Collider other)
