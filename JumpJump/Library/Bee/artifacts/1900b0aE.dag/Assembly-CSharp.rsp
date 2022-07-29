@@ -391,6 +391,8 @@
 "Assets/Scripts/PlatformSpawner.cs"
 "Assets/Scripts/Player/PlayerInput.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
+"Assets/Scripts/SceneChange.cs"
+"Assets/Scripts/UI/ColorTest.cs"
 "Assets/Scripts/UI/ScoreText.cs"
 "Assets/Scripts/Util/SingletonBehavior.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"

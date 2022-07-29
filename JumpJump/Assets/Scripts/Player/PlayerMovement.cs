@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody _rigidbody;
     private PlayerInput _input;
-    public int JumpSpeed = 2;
+    public int JumpSpeed = 10;
     //private float _maxJumpDegree = 50f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.Space) && _isJumping == false)
         {
+            StartCoroutine("PenguinTumble");
             Jump();
         }
     }
@@ -35,14 +36,16 @@ public class PlayerMovement : MonoBehaviour
     {
         while(_isJumping==false)
         {
-            yield return new WaitForSeconds(0.1f);
-            _buttonPressedTime += 0.5f;
+            yield return new WaitForSeconds(0.01f);
+            _buttonPressedTime += 1f;
             Vector3 groundPos = _ground.transform.position;
-            groundPos.y -= 0.005f;
+            groundPos.y -= 0.0001f;
             _ground.transform.position = groundPos;
 
         }
     }
+
+    
     void Jump()
     {
         if(_isJumping)
@@ -50,11 +53,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         _isJumping = true;
-        Vector3 pos = transform.position;
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
         //_rigidbody.AddForce(0, 80f, _buttonPressedTime);
         _rigidbody.AddForce(0, 90f, 0);
-        _rigidbody.AddForce(transform.forward * _buttonPressedTime * JumpSpeed);
+        _rigidbody.AddForce(transform.forward * _buttonPressedTime * JumpSpeed * Time.deltaTime);
 
         _buttonPressedTime = 0.0f;
     }

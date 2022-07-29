@@ -40,6 +40,8 @@ public class Platform : MonoBehaviour
             startPos.y += 0.1f;
             transform.position = startPos;
         }
+        startPos.y = 0f;
+        transform.position = startPos;
         
     }
 }

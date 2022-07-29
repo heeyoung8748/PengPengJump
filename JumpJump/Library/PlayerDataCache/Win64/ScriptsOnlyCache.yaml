@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - PlatformSpawner
     - PlayerInput
     - PlayerMovement
+    - SceneChange
     - ScoreText
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -14,14 +15,12 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -32,6 +31,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -77,7 +82,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
   methodsToPreserve: []
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Play.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -95,8 +100,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -117,8 +120,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1668}
     - Class: 114
-      Script: {instanceID: 2562}
-    - Class: 114
       Script: {instanceID: 3072}
     - Class: 114
       Script: {instanceID: 3164}
@@ -133,31 +134,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4484}
     - Class: 114
-      Script: {instanceID: 5218}
+      Script: {instanceID: 6270}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 6584}
     - Class: 114
-      Script: {instanceID: 5736}
+      Script: {instanceID: 6788}
     - Class: 114
-      Script: {instanceID: 6268}
+      Script: {instanceID: 7088}
     - Class: 114
-      Script: {instanceID: 6580}
+      Script: {instanceID: 7624}
     - Class: 114
-      Script: {instanceID: 6784}
+      Script: {instanceID: 7678}
     - Class: 114
-      Script: {instanceID: 7084}
+      Script: {instanceID: 7914}
     - Class: 114
-      Script: {instanceID: 7620}
+      Script: {instanceID: 8408}
     - Class: 114
-      Script: {instanceID: 7674}
+      Script: {instanceID: 8802}
     - Class: 114
-      Script: {instanceID: 7910}
-    - Class: 114
-      Script: {instanceID: 8404}
-    - Class: 114
-      Script: {instanceID: 8798}
-    - Class: 114
-      Script: {instanceID: 9378}
+      Script: {instanceID: 9382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -171,6 +166,83 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Start.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1668}
+    - Class: 114
+      Script: {instanceID: 2562}
+    - Class: 114
+      Script: {instanceID: 3164}
+    - Class: 114
+      Script: {instanceID: 3452}
+    - Class: 114
+      Script: {instanceID: 5220}
+    - Class: 114
+      Script: {instanceID: 5366}
+    - Class: 114
+      Script: {instanceID: 5738}
+    - Class: 114
+      Script: {instanceID: 6468}
+    - Class: 114
+      Script: {instanceID: 6788}
+    - Class: 114
+      Script: {instanceID: 7678}
+    - Class: 114
+      Script: {instanceID: 8408}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -729,6 +801,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 680090e11af167f012d94eb751835ede
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColorTest
+  - hash:
+      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.Flow.dll
     namespaceName: Unity.VisualScripting
@@ -1039,6 +1117,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChange
   - hash:
       serializedVersion: 2
       Hash: 694d20920c0e41f567e119f7159a3644
@@ -1737,5 +1821,6 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Start.unity
+  - Assets/Scenes/Play.unity
   playerPath: C:/Users/KGA_08/Desktop/heeyoung/Github/UnityProject/JumpJump/Build/JumpJump.exe
