@@ -27,7 +27,7 @@ public class SceneChange : MonoBehaviour
     void TextBlink()
     {
         _elapsedTime += Time.deltaTime;
-        if(_elapsedTime >= 0.5f)
+        if(_elapsedTime >= 1f)
         {
             _elapsedTime = 0f;
             _isBlink = !_isBlink;

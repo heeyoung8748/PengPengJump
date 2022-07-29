@@ -24,7 +24,7 @@ public class GameManager : SingletonBehavior<GameManager>
     }
     private void Start()
     {
-        Time.timeScale = 2;
+        Time.timeScale = 6;
         GamePause.AddListener(IsPaused);
     }
 

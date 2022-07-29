@@ -36,8 +36,8 @@ public class Platform : MonoBehaviour
         Vector3 startPos = transform.position;
         while(startPos.y < 0f)
         {
-            yield return new WaitForSeconds(0.01f);
-            startPos.y += 0.1f;
+            yield return new WaitForSeconds(0.02f);
+            startPos.y += 0.5f;
             transform.position = startPos;
         }
         startPos.y = 0f;
