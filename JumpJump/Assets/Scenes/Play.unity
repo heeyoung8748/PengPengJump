@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -849,8 +849,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a1ca1716f05e69042800ba3b549d9bfd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1365,7 +1365,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1522784, g: 0.40940186, b: 0.5471698, a: 0}
+  m_BackGroundColor: {r: 0.4198113, g: 0.7932, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1405,8 +1405,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.29263255, y: -0.011933394, z: 0.0036522753, w: 0.95614356}
-  m_LocalPosition: {x: 5.91, y: 52.61, z: -33.46}
+  m_LocalRotation: {x: 0.20949791, y: -0.1367178, z: 0.029596532, w: 0.9677515}
+  m_LocalPosition: {x: 24.39, y: 59.82, z: -51.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1597,20 +1597,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 4.51, y: 18.25, z: 1.8}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
+  m_TrackedObjectOffset: {x: 10, y: 23.5, z: -1}
+  m_LookaheadTime: 1
+  m_LookaheadSmoothing: 30
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.1
-  m_VerticalDamping: 0.1
-  m_ScreenX: 0.43
-  m_ScreenY: 0.62
-  m_DeadZoneWidth: 0.62
-  m_DeadZoneHeight: 0.39
-  m_SoftZoneWidth: 0.87
-  m_SoftZoneHeight: 0.98
+  m_HorizontalDamping: 20
+  m_VerticalDamping: 20
+  m_ScreenX: 0.51
+  m_ScreenY: 0.7
+  m_DeadZoneWidth: 1.67
+  m_DeadZoneHeight: 1.59
+  m_SoftZoneWidth: 2
+  m_SoftZoneHeight: 2
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: -0.0000001453772
   m_CenterOnActivate: 1
 --- !u!114 &1091343208
 MonoBehaviour:
@@ -1625,10 +1625,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 5.91, y: 44.31, z: -33.46}
-  m_XDamping: 0.1
-  m_YDamping: 0.1
-  m_ZDamping: 1
+  m_FollowOffset: {x: 24.39, y: 51.52, z: -51.3}
+  m_XDamping: 20
+  m_YDamping: 20
+  m_ZDamping: 11.2
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -2681,7 +2681,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5613208, g: 0.7319182, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2721,8 +2721,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999359032}
-  m_LocalRotation: {x: 0.29263255, y: -0.011933394, z: 0.0036522753, w: 0.95614356}
-  m_LocalPosition: {x: 5.91, y: 52.61, z: -33.46}
+  m_LocalRotation: {x: 0.20949791, y: -0.1367178, z: 0.029596532, w: 0.9677515}
+  m_LocalPosition: {x: 24.39, y: 59.82, z: -51.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

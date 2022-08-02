@@ -15,14 +15,12 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -120,41 +118,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1668}
+      Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 3072}
+      Script: {instanceID: 3074}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3368}
+      Script: {instanceID: 3370}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 3680}
     - Class: 114
-      Script: {instanceID: 4484}
+      Script: {instanceID: 4486}
     - Class: 114
-      Script: {instanceID: 6270}
+      Script: {instanceID: 6272}
     - Class: 114
-      Script: {instanceID: 6584}
+      Script: {instanceID: 6586}
     - Class: 114
-      Script: {instanceID: 6788}
+      Script: {instanceID: 6790}
     - Class: 114
-      Script: {instanceID: 7088}
+      Script: {instanceID: 7090}
     - Class: 114
-      Script: {instanceID: 7624}
+      Script: {instanceID: 7626}
     - Class: 114
-      Script: {instanceID: 7678}
+      Script: {instanceID: 7680}
     - Class: 114
-      Script: {instanceID: 7914}
+      Script: {instanceID: 7916}
     - Class: 114
-      Script: {instanceID: 8408}
+      Script: {instanceID: 8410}
     - Class: 114
-      Script: {instanceID: 8802}
+      Script: {instanceID: 8804}
     - Class: 114
-      Script: {instanceID: 9382}
+      Script: {instanceID: 9384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -211,29 +209,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1668}
+      Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3454}
     - Class: 114
-      Script: {instanceID: 5220}
+      Script: {instanceID: 5222}
     - Class: 114
-      Script: {instanceID: 5366}
+      Script: {instanceID: 5368}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 6468}
+      Script: {instanceID: 6470}
     - Class: 114
-      Script: {instanceID: 6788}
+      Script: {instanceID: 6790}
     - Class: 114
-      Script: {instanceID: 7678}
+      Script: {instanceID: 7680}
     - Class: 114
-      Script: {instanceID: 7914}
+      Script: {instanceID: 7916}
     - Class: 114
-      Script: {instanceID: 8408}
+      Script: {instanceID: 8410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1823,4 +1821,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Play.unity
-  playerPath: C:/Users/KGA_08/Desktop/heeyoung/Github/UnityProject/JumpJump/Build/JumpJump.exe
+  playerPath: "D:/\uACBD\uC77C/Unity_Project&Homework/UnityProject/JumpJump/Build/JumpJump.exe"
