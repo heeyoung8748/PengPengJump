@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1994735ed3b5ba1448e5cfcab7510373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSpeed: 15
+  JumpSpeed: 20
 --- !u!95 &782628379
 Animator:
   serializedVersion: 4
@@ -1335,7 +1335,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 51.7
+  m_Radius: 79.3
   m_Center: {x: 0, y: 0, z: 25.52}
 --- !u!1 &963194225
 GameObject:
@@ -1405,7 +1405,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.20949791, y: -0.1367178, z: 0.029596532, w: 0.9677515}
+  m_LocalRotation: {x: 0.2107765, y: -0.13666576, z: 0.029774314, w: 0.9674757}
   m_LocalPosition: {x: 24.39, y: 59.82, z: -51.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1605,12 +1605,12 @@ MonoBehaviour:
   m_VerticalDamping: 20
   m_ScreenX: 0.51
   m_ScreenY: 0.7
-  m_DeadZoneWidth: 1.67
-  m_DeadZoneHeight: 1.59
+  m_DeadZoneWidth: 2
+  m_DeadZoneHeight: 2
   m_SoftZoneWidth: 2
   m_SoftZoneHeight: 2
   m_BiasX: 0
-  m_BiasY: -0.0000001453772
+  m_BiasY: 0
   m_CenterOnActivate: 1
 --- !u!114 &1091343208
 MonoBehaviour:
@@ -2721,7 +2721,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999359032}
-  m_LocalRotation: {x: 0.20949791, y: -0.1367178, z: 0.029596532, w: 0.9677515}
+  m_LocalRotation: {x: 0.2107765, y: -0.13666576, z: 0.029774314, w: 0.9674757}
   m_LocalPosition: {x: 24.39, y: 59.82, z: -51.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
