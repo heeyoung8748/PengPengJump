@@ -19,27 +19,29 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if(_isJumping == false)
+        if (_isJumping == true)
         {
+            return;
+        }
             if (Input.GetKey(KeyCode.Space) && _isReadyToJump == false)
             {
                 _isReadyToJump = true;
                 StartCoroutine("buttonPressSec");
             }
-            else if(Input.GetKeyUp(KeyCode.Space))
+            else if(Input.GetKeyUp(KeyCode.Space) && _isReadyToJump == true)
             {
+                _isJumping = true;
                 StartCoroutine("Jump");
                 StartCoroutine("Tumble");
                 _isReadyToJump = false;
             }
-        }
     }
 
     IEnumerator buttonPressSec()
     {
         while(_isReadyToJump)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             _buttonPressedTime += 0.2f;
             Vector3 groundPos = _ground.transform.position;
             groundPos.y -= 0.1f;
@@ -51,19 +53,15 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Jump()
     {
-        if(_isJumping)
-        {
-            yield break;
-        }
-        _isJumping = true;
-        Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
         _rigidbody.AddForce(0, 400f, 0);
         while(_buttonPressedTime > 0)
         {
             _rigidbody.AddForce(transform.forward * _buttonPressedTime * JumpSpeed * Time.deltaTime);
             _buttonPressedTime -= Time.deltaTime;
         }
+
         _buttonPressedTime = 0.0f;
+        yield return null;
     }
 
     private float _deltaAngle = 360 / Mathf.PI;
@@ -87,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        _isJumping = false;
         if(collision.transform.tag == "Ground" || collision.transform.tag == "Combo")
         {
+            _isJumping = false;
             _ground = collision.gameObject;
         }
         else

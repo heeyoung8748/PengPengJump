@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ComboZone
     - GameManager
     - Platform
     - PlatformSpawner
@@ -33,6 +34,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.dll:
+    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -155,6 +158,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8804}
     - Class: 114
       Script: {instanceID: 9384}
+    - Class: 114
+      Script: {instanceID: 10028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -513,7 +518,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: c3d41173f396399e0d3110dcddb30721
+      Hash: 96494e49bd62dc2329b5625024abef37
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1663,6 +1668,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComboZone
   - hash:
       serializedVersion: 2
       Hash: 23d669c8bf2983ca4a3df160658318a6
