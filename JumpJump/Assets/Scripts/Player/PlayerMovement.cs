@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _input = GetComponent<PlayerInput>();
+        //_input = GetComponent<PlayerInput>();
     }
     void Update()
     {
@@ -87,13 +87,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "DeadZone" || transform.position.y < -0.5)
+        _isJumping = false;
+        if(collision.transform.tag == "Ground" || collision.transform.tag == "Combo")
         {
-            Die();
-        }
-        else if(collision.transform.tag == "Ground")
-        {
-            _isJumping = false;
             _ground = collision.gameObject;
         }
         else
@@ -114,5 +110,6 @@ public class PlayerMovement : MonoBehaviour
     void Die()
     {
         gameObject.SetActive(false);
+        GameManager.Instance.WasItComboBefore = false;
     }
 }
