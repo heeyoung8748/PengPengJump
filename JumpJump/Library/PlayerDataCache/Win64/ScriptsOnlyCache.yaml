@@ -1,7 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ComboCount
+    - ComboZone
     - GameManager
+    - GameOverScore
+    - GameOverUI
+    - HighScoreUI
     - Platform
     - PlatformSpawner
     - PlayerInput
@@ -15,14 +20,12 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -124,37 +127,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3074}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3148}
     - Class: 114
-      Script: {instanceID: 3272}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 3274}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3372}
     - Class: 114
-      Script: {instanceID: 3680}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 4486}
+      Script: {instanceID: 3682}
     - Class: 114
-      Script: {instanceID: 6272}
+      Script: {instanceID: 4488}
     - Class: 114
-      Script: {instanceID: 6586}
+      Script: {instanceID: 5236}
     - Class: 114
-      Script: {instanceID: 6790}
+      Script: {instanceID: 5392}
     - Class: 114
-      Script: {instanceID: 7090}
+      Script: {instanceID: 6276}
     - Class: 114
-      Script: {instanceID: 7626}
+      Script: {instanceID: 6590}
     - Class: 114
-      Script: {instanceID: 7680}
+      Script: {instanceID: 6794}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 7094}
     - Class: 114
-      Script: {instanceID: 8410}
+      Script: {instanceID: 7630}
     - Class: 114
-      Script: {instanceID: 8804}
+      Script: {instanceID: 7684}
     - Class: 114
-      Script: {instanceID: 9384}
+      Script: {instanceID: 7920}
+    - Class: 114
+      Script: {instanceID: 8364}
+    - Class: 114
+      Script: {instanceID: 8416}
+    - Class: 114
+      Script: {instanceID: 8810}
+    - Class: 114
+      Script: {instanceID: 9390}
+    - Class: 114
+      Script: {instanceID: 10034}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,25 +228,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 3456}
     - Class: 114
       Script: {instanceID: 5222}
     - Class: 114
-      Script: {instanceID: 5368}
+      Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 5740}
+      Script: {instanceID: 5744}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 6474}
     - Class: 114
-      Script: {instanceID: 6790}
+      Script: {instanceID: 6794}
     - Class: 114
-      Script: {instanceID: 7680}
+      Script: {instanceID: 7684}
     - Class: 114
-      Script: {instanceID: 7916}
+      Script: {instanceID: 7920}
     - Class: 114
-      Script: {instanceID: 8410}
+      Script: {instanceID: 8416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -447,6 +460,12 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverScore
+  - hash:
+      serializedVersion: 2
       Hash: 27e5341178f188b89bdc6495710b590c
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -513,7 +532,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: c3d41173f396399e0d3110dcddb30721
+      Hash: a994a91978f5d0e00ebb4416ab523ef7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -801,12 +820,6 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 680090e11af167f012d94eb751835ede
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ColorTest
-  - hash:
-      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.Flow.dll
     namespaceName: Unity.VisualScripting
@@ -879,6 +892,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: bce706f91d40913f9ea23f3a91b97f2a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComboCount
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -931,6 +950,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0799d4b59a7ca0d0bde131cb6edab7c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HighScoreUI
   - hash:
       serializedVersion: 2
       Hash: 3375c3d749f8f4cad889721b431bdc27
@@ -1395,6 +1420,12 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOverUI
+  - hash:
+      serializedVersion: 2
       Hash: e09e8bebc0fcd32bb8af1287a6b44816
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1663,6 +1694,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComboZone
   - hash:
       serializedVersion: 2
       Hash: 23d669c8bf2983ca4a3df160658318a6
