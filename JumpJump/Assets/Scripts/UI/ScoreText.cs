@@ -16,7 +16,6 @@ public class ScoreText : MonoBehaviour
     }
     public void UpdateText(int score)
     {
-        // _ui의 텍스트를 수정
         _ui.text = $"{score}";
     }
 }

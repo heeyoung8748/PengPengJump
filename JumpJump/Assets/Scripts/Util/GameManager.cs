@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class GameManager : SingletonBehavior<GameManager>
 {
-    private int _currentScore = 0;
-    private bool _pause = false;
-    public bool WasItComboBefore;
-    public int ComboCounts = 0;
-    public int ComboScore = 0;
     public UnityEvent<int> OnScoreChanged = new UnityEvent<int>();
+    public UnityEvent<int> OnHighScoreChanged = new UnityEvent<int>();
+    public UnityEvent OnGameEnd = new UnityEvent();
     public UnityEvent GamePause = new UnityEvent();
+
+    public bool WasItComboBefore;
+    public bool IsOver;
     public int CurrentScore
     {
         get
@@ -24,13 +24,17 @@ public class GameManager : SingletonBehavior<GameManager>
             OnScoreChanged.Invoke(_currentScore);
         }
     }
+
+    private bool _pause = false;
+    private int _currentScore = 0;
+
     private void Start()
     {
+
         Time.timeScale = 6;
         WasItComboBefore = false;
         GamePause.AddListener(IsPaused);
     }
-
     void Update()
     {
         if(Input.GetKey(KeyCode.R))
@@ -51,12 +55,15 @@ public class GameManager : SingletonBehavior<GameManager>
         else Time.timeScale = 2;
         return;
     }
+
     public void AddCurrentScore()
     {
 
         CurrentScore += 1;
     }
 
+    public int ComboCounts;
+    public int ComboScore;
     public void ComboIncrease()
     {
 
@@ -70,5 +77,19 @@ public class GameManager : SingletonBehavior<GameManager>
         CurrentScore += ComboScore;
         WasItComboBefore = true;
         Debug.Log($"{ComboCounts}ÄÞº¸");
+    }
+
+
+    public GameObject GameOverUI;
+    public void End()
+    {
+        OnGameEnd.Invoke();
+        //GameOverUI.SetActive(true);
+        int savedHighScore = PlayerPrefs.GetInt("HighScore", 0);
+        int highScore = Mathf.Max(_currentScore, savedHighScore);
+        PlayerPrefs.SetInt("HighScore", highScore);
+        OnScoreChanged.Invoke(_currentScore);
+        OnHighScoreChanged.Invoke(highScore);
+        IsOver = true;
     }
 }

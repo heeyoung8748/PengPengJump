@@ -43,8 +43,6 @@ public class PlatformSpawner : MonoBehaviour
         currentPlatform.transform.localScale = new Vector3(randomScale, randomScale * 1.4f, randomScale);
 
         currentPlatform.gameObject.SetActive(true);
-        // 오브젝트 둥실 떠오르는 효과는 이쯤에 넣기
-        
 
         _currentPoolPosition = spawnPosition;
         currentPlatform.OnEnable();

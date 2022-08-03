@@ -102,12 +102,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 lookPos = other.transform.position;
             lookPos.y = 0;
             transform.LookAt(lookPos);
-
+        }
+        else
+        {
+            return;
         }
     }
     void Die()
     {
         gameObject.SetActive(false);
+        GameManager.Instance.End();
         GameManager.Instance.WasItComboBefore = false;
     }
 }
