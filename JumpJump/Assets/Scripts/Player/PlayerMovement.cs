@@ -7,19 +7,16 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
     private PlayerInput _input;
     public int JumpSpeed = 5;
-    //private float _maxJumpDegree = 50f;
     private float _buttonPressedTime = 0.0f;
     private bool _isJumping = false;
     private bool _isReadyToJump = false;
     private GameObject _ground;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _input = GetComponent<PlayerInput>();
     }
-    // Update is called once per frame
     void Update()
     {
         if(_isJumping == false)
@@ -31,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
             }
             else if(Input.GetKeyUp(KeyCode.Space))
             {
-                StartCoroutine("Tumble");
                 StartCoroutine("Jump");
+                StartCoroutine("Tumble");
                 _isReadyToJump = false;
             }
         }
@@ -60,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
         _isJumping = true;
         Debug.Log($"버튼 누른 시간: {_buttonPressedTime}");
-        _rigidbody.AddForce(0, 600f, 0);
+        _rigidbody.AddForce(0, 400f, 0);
         while(_buttonPressedTime > 0)
         {
             _rigidbody.AddForce(transform.forward * _buttonPressedTime * JumpSpeed * Time.deltaTime);
@@ -69,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         _buttonPressedTime = 0.0f;
     }
 
-    private float _deltaAngle = 360 / 4; // 점프 시간 동안 360도를 회전해야 한다.
+    private float _deltaAngle = 360 / Mathf.PI;
     private float _elapsedTime = 0f;
     private Vector3 _initPosition;
     IEnumerator Tumble()
@@ -77,12 +74,10 @@ public class PlayerMovement : MonoBehaviour
         _elapsedTime = 0f;
         _initPosition = transform.forward;
 
-        while (_elapsedTime < 4)
+        while (_elapsedTime < Mathf.PI)
         {
             _elapsedTime += Time.deltaTime;
 
-            //Vector3 deltaPosition = new Vector3(0f, 40f * Mathf.Sin(_elapsedTime), _elapsedTime * _buttonPressedTime);
-            //_rigidbody.MovePosition(_initPosition + deltaPosition);
             Quaternion deltaQuaternion = Quaternion.Euler(_deltaAngle * Time.deltaTime, 0f, 0f);
             _rigidbody.MoveRotation(_rigidbody.rotation * deltaQuaternion);
 
