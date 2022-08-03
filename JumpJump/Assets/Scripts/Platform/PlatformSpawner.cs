@@ -35,8 +35,8 @@ public class PlatformSpawner : MonoBehaviour
     void SpawnPlatform()
     {
         int randomXpos = Random.Range(-2, 4) * 10;
-        int randomZpos = Random.Range(3, 6) * 10;
-        float randomScale = Random.Range(5, 9) * 0.1f;
+        int randomZpos = Random.Range(3, 7) * 10;
+        float randomScale = Random.Range(5, 8) * 0.1f;
         Vector3 spawnPosition = new Vector3(_currentPoolPosition.x + randomXpos, -5f, _currentPoolPosition.z + randomZpos);
         Platform currentPlatform = _platforms[_nextSpawnPlatformIndex];
         currentPlatform.transform.position = spawnPosition;

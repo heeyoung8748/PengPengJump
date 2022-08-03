@@ -329,7 +329,7 @@
 "Assets/Scripts/Platform/PlatformSpawner.cs"
 "Assets/Scripts/Player/PlayerInput.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
-"Assets/Scripts/UI/ColorTest.cs"
+"Assets/Scripts/UI/ComboCount.cs"
 "Assets/Scripts/UI/GameOverScore.cs"
 "Assets/Scripts/UI/GameOverUI.cs"
 "Assets/Scripts/UI/HighScoreUI.cs"

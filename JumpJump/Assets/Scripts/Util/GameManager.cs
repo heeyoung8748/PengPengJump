@@ -9,6 +9,7 @@ public class GameManager : SingletonBehavior<GameManager>
     public UnityEvent<int> OnHighScoreChanged = new UnityEvent<int>();
     public UnityEvent OnGameEnd = new UnityEvent();
     public UnityEvent GamePause = new UnityEvent();
+    public UnityEvent<int> IsCombo = new UnityEvent<int>();
 
     public bool WasItComboBefore;
     public bool IsOver;
@@ -58,7 +59,9 @@ public class GameManager : SingletonBehavior<GameManager>
 
     public void AddCurrentScore()
     {
-
+        ComboCounts = 0;
+        ComboScore = 0;
+        IsCombo.Invoke(ComboCounts);
         CurrentScore += 1;
     }
 
@@ -77,6 +80,7 @@ public class GameManager : SingletonBehavior<GameManager>
         CurrentScore += ComboScore;
         WasItComboBefore = true;
         Debug.Log($"{ComboCounts}ÄÞº¸");
+        IsCombo.Invoke(ComboCounts);
     }
 
 
@@ -84,7 +88,6 @@ public class GameManager : SingletonBehavior<GameManager>
     public void End()
     {
         OnGameEnd.Invoke();
-        //GameOverUI.SetActive(true);
         int savedHighScore = PlayerPrefs.GetInt("HighScore", 0);
         int highScore = Mathf.Max(_currentScore, savedHighScore);
         PlayerPrefs.SetInt("HighScore", highScore);

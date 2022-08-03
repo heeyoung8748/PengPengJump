@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        //_input = GetComponent<PlayerInput>();
     }
     void Update()
     {
@@ -42,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         while(_isReadyToJump)
         {
             yield return new WaitForSeconds(0.05f);
-            _buttonPressedTime += 0.2f;
+            _buttonPressedTime += 0.3f;
             Vector3 groundPos = _ground.transform.position;
             groundPos.y -= 0.1f;
             _ground.transform.position = groundPos;
