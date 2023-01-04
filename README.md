@@ -1,10 +1,17 @@
-# 게임 개요
-유니티 개인 프로젝트
-화면을 누르는 시간에 따라 펭귄이 점프하는 힘이 달라지며, 물에 빠지면 끝나는 게임
-pc로 만들 시 화면 터치가 불가능한 관계로 스페이스바를 통해 플레이가 가능하도록 할 예정
+# Description
+펭귄이 점프하는 유니티 개인 프로젝트
+레퍼런스 게임 영상: [링크](https://www.youtube.com/watch?v=Wh41xGIwDfk&t=1037s)
 
-# 개발 환경
-Unity3D, 2주
+-----------------
 
-# 링크
-https://drive.google.com/file/d/15gRRrrael9i-3Up6a3rpsbUgs0eMv7i2/view?usp=sharing
+# Environment
+- 기간 : 2022.07.25 ~ 2022.08.04 (10일)
+- 인원 : 1명
+- 툴 : Unity 3D 2021.3.6f1
+- 외부 패키지 or 라이브러리 : X
+- 빌드 환경 : PC
+
+-----------------
+
+# Result
+[시연 영상](https://www.youtube.com/shorts/fwbiSLQ3qAo)
