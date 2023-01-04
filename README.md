@@ -1,6 +1,6 @@
 # Description
-펭귄이 점프하는 유니티 개인 프로젝트
-레퍼런스 게임 영상: [링크](https://www.youtube.com/watch?v=Wh41xGIwDfk&t=1037s)
+- 펭귄이 점프하는 유니티 개인 프로젝트
+- 레퍼런스 게임 영상: [링크](https://www.youtube.com/watch?v=Wh41xGIwDfk&t=1037s)
 
 -----------------
 
